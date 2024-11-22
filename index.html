@@ -5,48 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drag & Drop Website</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 
-    <section id="s1">
-        <div class="carre draggable"></div>
-        <div class="carreA draggable"></div>
-        <div class="carreB draggable"></div>
-    </section>
+  <nav class="navbar">
+    <a href="#s1" class="logo">Control the Space 🛰️</a>
+  </nav>
 
-    <section id="s2">
-       
-            <div class="div1"> <img class="draggable" src="Images/1.png"></div>
-            <div class="div2"> <img class="draggable" src="Images/2.png"></div>
-            <div class="div3"> <img class="draggable" src="Images/3.png"></div>
-            <div class="div4"> <img class="draggable" src="Images/4.png"></div>
-            <div class="div5"> <img class="draggable" src="Images/5.png"></div>
-            <div class="div6"> <img class="draggable" src="Images/1.png"></div>
-            <div class="div7"> <img class="draggable" src="Images/2.png"></div>
-            <div class="div8"> <img class="draggable" src="Images/3.png"></div>
-            <div class="div9"> <img class="draggable" src="Images/4.png"></div>
-            </div>
+  <div id=s1>
+    <div class="div1"> <img class="draggable" src="Images/étoile2.png"></div>
+    <div class="div2"> <img class="draggable" src="Images/lune.png"></div>
+    <div class="div3"> <img class="draggable" src="Images/étoile1.png"></div>
+    <div class="div4"> <img class="draggable" src="Images/satellite.png"></div>
+    <div class="div5"> <img class="draggable" src="Images/lune.png"></div>
+    <div class="div6"> <img class="draggable" src="Images/étoile1.png"></div>
+    <div class="div7"> <img class="draggable" src="Images/étoile2.png"></div>
+    <div class="div8"> <img class="draggable" src="Images/lune.png"></div>
+    <div class="div9"> <img class="draggable" src="Images/étoile1.png"></div>
+    <div class="div10"> <img class="draggable" src="Images/étoile2.png"></div>
+    <div class="div11"> <img class="draggable" src="Images/étoile1.png"></div>
+    <div class="div12"> <img class="draggable" src="Images/étoile2.png"></div>
+    <div class="div13"> <img class="draggable" src="Images/étoile1.png"></div>
+    <div class="div14"> <img class="draggable" src="Images/étoile2.png"></div>
+    <div class="div15"> <img class="draggable" src="Images/étoile1.png"></div>
+    <div class="div16"> <img class="draggable" src="Images/étoile1.png"></div>
+    </div>
 
-    </section>
+  <section id="s2">
+      <div class="div1"> <img class="draggable" src="Images/étoile1.png"></div>
+      <div class="div2"> <img class="draggable" src="Images/lune.png"></div>
+      <div class="div3"> <img class="draggable" src="Images/étoile1.png"></div>
+      <div class="div4"> <img class="draggable" src="Images/étoile2.png"></div>
+      <div class="div5"> <img class="draggable" src="Images/satellite.png"></div>
+      <div class="div6"> <img class="draggable" src="Images/lune.png"></div>
+      <div class="div7"> <img class="draggable" src="Images/étoile1.png"></div>
+  </section>
            
-    <script src="https://unpkg.com/draggabilly@3/dist/draggabilly.pkgd.min.js"></script>
+  <script src="https://unpkg.com/draggabilly@3/dist/draggabilly.pkgd.min.js"></script>
 
+  <script>
 
-        <script>
-var draggableElems = document.querySelectorAll('.draggable');
-// array of Draggabillies
-var draggies = []
-// init Draggabillies
-for ( var i=0; i < draggableElems.length; i++ ) {
-  var draggableElem = draggableElems[i];
-  var draggie = new Draggabilly( draggableElem, {
-    // options...
-  });
-  draggies.push( draggie );
-}
-        </script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        });
+      });
+  </script>
+    
+  <script>
+      var draggableElems = document.querySelectorAll('.draggable');
+      // array of Draggabillies
+      var draggies = [];
+      // init Draggabillies
+      for (var i = 0; i < draggableElems.length; i++) {
+          var draggableElem = draggableElems[i];
+          var draggie = new Draggabilly(draggableElem, {
+              // options...
+          });
+          draggies.push(draggie);
+      }
+  </script>
 
 </body>
-
 </html>
