@@ -12,19 +12,52 @@
     <a href="#s1" class="logo">Control the Space 🛰️</a>
   </nav>
 
+  <audio id="background-audio" autoplay loop>
+    <source src="Images/atmosphere-sound-effect-239969.mp3" type="audio/mp3">
+    Ton navigateur ne supporte pas la balise audio.
+</audio>
+
+<script>
+  document.addEventListener('click', () => {
+      const audio = document.getElementById('background-audio');
+      audio.play().catch((error) => {
+          console.log("Erreur lors de la lecture audio:", error);
+      });
+  });
+</script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const audio = document.getElementById('background-audio');
+        const playButton = document.getElementById('play-audio');
+
+        // Essaye de jouer l'audio automatiquement
+        audio.play().catch(() => {
+            // Si bloqué, affiche le bouton
+            playButton.style.display = 'block';
+        });
+
+        // Joue l'audio au clic du bouton
+        playButton.addEventListener('click', () => {
+            audio.play();
+            playButton.style.display = 'none'; // Cache le bouton après activation
+        });
+    });
+</script>
+
   <div id=s1>
     <div class="div1"> <img class="draggable" src="Images/étoile2.png"></div>
     <div class="div2"> <img class="draggable" src="Images/lune.png"></div>
     <div class="div3"> <img class="draggable" src="Images/étoile1.png"></div>
     <div class="div4"> <img class="draggable" src="Images/satellite.png"></div>
     <div class="div5"> <img class="draggable" src="Images/lune.png"></div>
-    <div class="div6"> <img class="draggable" src="Images/étoile1.png"></div>
-    <div class="div7"> <img class="draggable" src="Images/étoile2.png"></div>
+    <div class="div6"> <img class="draggable" src="Images/astronaute.png"></div>
+    <div class="div7"> <img class="draggable" src="Images/étoile1.png"></div>
     <div class="div8"> <img class="draggable" src="Images/lune.png"></div>
     <div class="div9"> <img class="draggable" src="Images/étoile1.png"></div>
     <div class="div10"> <img class="draggable" src="Images/étoile2.png"></div>
     <div class="div11"> <img class="draggable" src="Images/étoile1.png"></div>
-    <div class="div12"> <img class="draggable" src="Images/étoile2.png"></div>
+    <div class="div12"> <img class="draggable" src="Images/lune.png"></div>
     <div class="div13"> <img class="draggable" src="Images/étoile1.png"></div>
     <div class="div14"> <img class="draggable" src="Images/étoile2.png"></div>
     <div class="div15"> <img class="draggable" src="Images/étoile1.png"></div>
