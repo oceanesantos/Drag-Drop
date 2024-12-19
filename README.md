@@ -6,7 +6,7 @@ Ce projet vise à créer un **expérience interactive et immersive** basée sur 
 Les utilisateurs peuvent glisser et déposer des éléments tels que des planètes, des étoiles, des astronautes et d'autres objets spatiaux, tout en profitant d'une ambiance sonore immersive.
 L’interface comprend des animations dynamiques et une typographie originale pour renforcer l’atmosphère du site web.
 
-![Prototype FIGMA](images/Prototype%20FIGMA.png)
+![Prototype FIGMA](Images/Prototype%20FIGMA.png)
 
 ## ✨ Fonctionnalités
 

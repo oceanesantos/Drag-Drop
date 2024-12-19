@@ -1,5 +1,5 @@
 // Texte à animer
-const text = "Create your own galaxy...|ARE YOU READY? GO !";
+const text = "Create your own galaxy...|ARE YOU READY? GO!";
 
 // Vitesse de l'animation
 const speed = {
