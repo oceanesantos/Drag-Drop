@@ -1,35 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Audiowide&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Glitch&display=swap');
+
 body {
     margin: 0;
-    background-color: rgb(255, 255, 255);
+    padding: 0;
+    height: 100vh;
+    background-color: #1e1e2f; /* Arrière-plan, modifiable selon ton site */
+    position: relative;
+}
+.home-button-container {
+    position: fixed; /* Toujours visible à l'écran */
+    top: 10px; /* Distance par rapport au haut */
+    right: 10px; /* Distance par rapport à la droite */
+    z-index: 1000; /* Priorité sur les autres éléments */
 }
 
-/* Barre de Navigation */
-
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background-color: rgb(0, 0, 0);
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
+/* Style de l'image du bouton */
+.home-image {
+    width: 50px; /* Taille de l'image */
+    height: auto;
+    cursor: pointer; /* Change le curseur pour indiquer un clic */
+    transition: transform 0.3s ease-in-out;
 }
-  
+
+.home-image:hover {
+    transform: scale(1.2); /* Agrandissement au survol */
+}
+
+.home-image:active {
+    transform: scale(1); /* Retour à la taille normale au clic */
+}
+
+.output {
+    text-align: center;
+    font-family: 'Audiowide', monospace;
+    color: white;
+    background: transparent; /* Suppression de l'arrière-plan */
+    position: fixed; /* Nécessaire pour mettre au-dessus */
+    top: 0; /* Positionner en haut de la page */
+    left: 0; /* Positionner à gauche */
+    width: 100%; /* Prend toute la largeur */
+    z-index: 9999; /* Toujours au-dessus des autres éléments */
+    text-align: center; /* Centrer le texte horizontalement */
+    pointer-events: none; /* Évite d'intercepter les clics */
+
+}
+.output h1 {
+    font-size: 30px;
+}
+/* Cursor Styling */
+.cursor::after {
+    content: '';
+    display: inline-block;
+    margin-left: 3px;
+    background-color: white;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+
+h1.cursor::after {
+    height: 24px;
+    width: 13px;
+}
+p.cursor::after {
+    height: 13px;
+    width: 6px;
+}
+@keyframes blink {
+    0% {
+        opacity: 1;
+   }
+    49% {
+        opacity: 1;
+   }
+    50% {
+        opacity: 0;
+   }
+    100% {
+        opacity: 0;
+   }
+}
+
   .logo {
     text-decoration: none;
     color: inherit;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.9rem;
     font-weight: bolder;
-
-/* Son en arrière plan */
 }
-audio {
-    display: none; 
+/* Son en arrière plan */
+
+audio{
+    display: none;
 }
 
   /* Section Drag & Drop */
@@ -42,6 +105,10 @@ audio {
     width: 100%; 
     height: 100vh; 
 }
+
+img {
+    width: 100%;
+}
 #s1 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -50,22 +117,22 @@ audio {
     grid-row-gap: 0px;
     }
     
-    .div1 { grid-area: 1 / 4 / 1 / 2; }
+    .div1 { grid-area: 2 / 2 / 1 / 2; }
     .div2 { grid-area: 2 / 4 / 2 / 3; }
     .div3 { grid-area: 1 / 3 / 1 / 4; }
     .div4 { grid-area: 3 / 4 / 2 / 4; }
     .div5 { grid-area: 1 / 1 / 3 / 2; }
     .div6 { grid-area: 2 / 2 / 3 / 3; }
-    .div7 { grid-area: 2 / 3 / 9 / 4; }
-    .div8 { grid-area: 4 / 4 / 3 / 5; }
+    .div7 { grid-area: 2 / 3 / 1 / 4; }
+    .div8 { grid-area: 4 / 4 / 3 / 4; }
     .div9 { grid-area: 3 / 1 / 4 / 2; }
     .div10 { grid-area: 3 / 2 / 4 / 3; }
-    .div11 { grid-area: 6 / 6 / 9 / 4; }
-    .div12 { grid-area: 3 / 4 / 5/ 3; }
-    .div13 { grid-area: 4 / 1 / 5 / 2; }
-    .div14 { grid-area: 4 / 2 / 5 / 3; }
-    .div15 { grid-area: 4 / 7 / 2 / 4; }
-    .div16 { grid-area: 4 / 4 / 5 / 3; }
+    .div11 { grid-area: 1/ 4 / 3 / 4; }
+    .div12 { grid-area: 3 / 4 / 1/ 3; }
+    .div13 { grid-area: 4 / 1 / 4/ 2; }
+    .div14 { grid-area: 4 / 2 / 4 / 3; }
+    .div15 { grid-area: 4 / 1 / 2 / 4; }
+    .div16 { grid-area: 4 / 4 / 2 / 3; }
     
 #s2 {
     background-image: url('Images/espace1.jpg');background-size: cover; 
