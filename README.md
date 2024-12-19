@@ -1,4 +1,4 @@
-#Drag & Drop Interactive Galaxy
+# Drag & Drop Interactive Galaxy
 
 🪐 Description
 
@@ -8,21 +8,21 @@ L’interface comprend des animations dynamiques et une typographie originale po
 
 ![Prototype FIGMA](images/Prototype%20FIGMA.png)
 
-##✨ Fonctionnalités
+## ✨ Fonctionnalités
 
 Une animation de style "machine à écrire" pour afficher les messages :
 
-"Create your own galaxy..."
+*"Create your own galaxy..."*
 
-"ARE YOU READY? GO!"
+*"ARE YOU READY? GO!"*
 
 Le texte alterne entre affichage et effacement pour créer une dynamique visuelle.
 
-Les éléments graphiques (planètes, étoiles, satellites, astronautes) peuvent être déplacés librement dans les différentes sections de l’écran grâce à la librairie  ([Draggabilly](https://draggabilly.desandro.com/m)).
+Les éléments graphiques (planètes, étoiles, satellites, astronautes) peuvent être déplacés librement dans les différentes sections de l’écran grâce à la librairie [Draggabilly](https://draggabilly.desandro.com/m).
 
 Une ambiance sonore en boucle pour plonger l’utilisateur dans l'univers galactique.
 
-##🛠️ Technologies Utilisées
+## 🛠️ Technologies Utilisées
 
 **HTML5** : Structure de la page.
 
@@ -34,7 +34,7 @@ Une ambiance sonore en boucle pour plonger l’utilisateur dans l'univers galact
 
 **Google Fonts** : Typographies personnalisées ("Audiowide", "Rubik Glitch", etc.).
 
-##📂 Fichiers Clés
+## 📂 Fichiers Clés
 
 **index.html** Contient la structure principale de la page.
 
@@ -46,7 +46,7 @@ Une ambiance sonore en boucle pour plonger l’utilisateur dans l'univers galact
 
 **Audio** : Effets sonores pour l’arrière-plan.
 
-##🎨 Intentions de Design
+## 🎨 Intentions de Design
 
 Donner à l’utilisateur le pouvoir de créer sa propre galaxie en manipulant les éléments spatiaux.
 
@@ -56,7 +56,7 @@ Utilisation d’animations douces et de polices futuristes pour renforcer le th�
 
 Un pictogramme fusée a été placé en haut à droite de l'écran pour se plonger dans l'immersion sonore mais également pour revenir en haut de la page.
 
-##🌟 Idées d’évolutions
+## 🌟 Idées d’évolutions
 
 - [ ] Intégrer une progression pour encourager l’utilisateur à créer des galaxies plus complexes.
 
